@@ -78,7 +78,7 @@ const CreateGroup = ({ open, setOpen, dark }) => {
     );
     setFilteredList(filtered);
 
-  }, [searchQuery, user?.friends]);
+  }, [searchQuery, user?.friends , allUsers]);
 
   //console.log(filteredList);
 
