@@ -8,7 +8,7 @@ const useGetGroups = () => {
     useEffect(() => {
         const fetchGroups = async () => {
             try {
-                const res = await axios.get('http://localhost:8000/api/v1/user/groups', { withCredentials: true });
+                const res = await axios.get('https://phshare.onrender.com/api/v1/user/groups', { withCredentials: true });
                 if (res.data.success) {
                     //console.log(res.data);
                     dispatch(setGroups(res.data.groups));

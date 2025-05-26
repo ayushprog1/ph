@@ -11,7 +11,7 @@ const useGetAllPost = () => {
             try {
                 if (!selectedGroup?._id) return; 
 
-                const res = await axios.get(`http://localhost:8000/api/v1/post/${selectedGroup?._id}/all`, { withCredentials: true });
+                const res = await axios.get(`https://phshare.onrender.com/api/v1/post/${selectedGroup?._id}/all`, { withCredentials: true });
                 if (res.data.success) {
                     //console.log(res.data);
                     dispatch(setPosts(res.data.posts));

@@ -8,7 +8,7 @@ const useGetAllUsers = () => {
     useEffect(() => {
         const getAllUsers = async () => {
             try {
-                const res = await axios.get('http://localhost:8000/api/v1/user/users', { withCredentials: true });
+                const res = await axios.get('https://phshare.onrender.com/api/v1/user/users', { withCredentials: true });
                 if (res.data.success) {
                     dispatch(setAllUsers(res.data.users));
                     //console.log(res.data);

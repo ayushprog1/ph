@@ -37,7 +37,7 @@ const Profile = () => {
         try {
             setLoading(true);
             //console.log(formData);
-            const res = await axios.post(`http://localhost:8000/api/v1/user/group/${groupId}/edit`, formData, {
+            const res = await axios.post(`https://phshare.onrender.com/api/v1/user/group/${groupId}/edit`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },
@@ -93,7 +93,7 @@ const Profile = () => {
         const fetchGroup = async () => {
             try {
                 setLoading(true);
-                const res = await axios.get(`http://localhost:8000/api/v1/user/group/${groupId}`, {
+                const res = await axios.get(`https://phshare.onrender.com/api/v1/user/group/${groupId}`, {
                     withCredentials: true,
                 });
                 //console.log(res.data);
@@ -109,7 +109,7 @@ const Profile = () => {
     }, [groupId]);
     //console.log(groupId,group);
 
-    const joinLink = `http://localhost:8000/api/v1/user/join/${group?.joinToken || groupId}`;
+    const joinLink = `https://phshare.onrender.com/api/v1/user/join/${group?.joinToken || groupId}`;
     const shareHandler = async () => {
         if (navigator.share) {
             try {

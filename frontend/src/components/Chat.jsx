@@ -22,7 +22,7 @@ const Chat = () => {
   const sendMessageHandler = async (groupId, postId) => {
     try {
       //console.log(groupId,postId);
-      const res = await axios.post(`http://localhost:8000/api/v1/message/send/${groupId}/${postId}`, { textMessage }, {
+      const res = await axios.post(`https://phshare.onrender.com/api/v1/message/send/${groupId}/${postId}`, { textMessage }, {
         headers: {
           'Content-Type': 'application/json'
         },

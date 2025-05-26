@@ -27,7 +27,7 @@ const CreateGroup = ({ open, setOpen, dark }) => {
     //console.log(groupData);
     try {
       setloading(true);
-      const res = await axios.post('http://localhost:8000/api/v1/user/creategroup', groupData, {
+      const res = await axios.post('https://phshare.onrender.com/api/v1/user/creategroup', groupData, {
         headers: {
           'Content-Type': 'application/json'
         },

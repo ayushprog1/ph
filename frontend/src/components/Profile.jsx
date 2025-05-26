@@ -44,7 +44,7 @@ const Profile = () => {
 
     const sendRequestHandler = async() =>{
         try {
-            const res = await axios.get(`http://localhost:8000/api/v1/user/request/${userProfile?._id}`, { 
+            const res = await axios.get(`https://phshare.onrender.com/api/v1/user/request/${userProfile?._id}`, { 
                 withCredentials: true 
             });
             //console.log(res.data);
@@ -60,7 +60,7 @@ const Profile = () => {
 
     const acceptFriendHandler = async() => {
         try {
-            const res = await axios.get(`http://localhost:8000/api/v1/user/accept/${userProfile?._id}`, { 
+            const res = await axios.get(`https://phshare.onrender.com/api/v1/user/accept/${userProfile?._id}`, { 
                 withCredentials: true 
             });
             if(res.data.success){
@@ -76,7 +76,7 @@ const Profile = () => {
 
     const removeFriendHandler = async() => {
         try {
-            const res = await axios.get(`http://localhost:8000/api/v1/user/remove/${userProfile?._id}`, { 
+            const res = await axios.get(`https://phshare.onrender.com/api/v1/user/remove/${userProfile?._id}`, { 
                 withCredentials: true 
             });
             if(res.data.success){
