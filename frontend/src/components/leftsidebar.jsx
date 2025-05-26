@@ -16,6 +16,7 @@ import { Button } from './ui/button'
 import logo from '../assets/phLogo.png';
 
 const Leftsidebar = ({ isOpen, toggleSidebar, dark, setDark }) => {
+  useGetAllUsers();
   const navigate = useNavigate();
   const { user } = useSelector(store => store.auth);
   const { groups, selectedGroup } = useSelector(store => store.groups);
