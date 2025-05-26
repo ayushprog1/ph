@@ -4,7 +4,7 @@ import { Input } from "./ui/input"
 import { Label } from "./ui/label";
 import { toast } from "sonner";
 import axios from "axios";
-import { Link, useNavigate, useOutletContext } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import { Loader2 } from "lucide-react";
 import { useSelector } from "react-redux";
 
@@ -16,7 +16,6 @@ const Signup = () => {
     });
     const [loading, setLoading] = useState(false);
     const {user} = useSelector(store=>store.auth);
-    const {dark} = useOutletContext();
     const navigate = useNavigate();
     const changeEventHandler = (e) => {
         setInput({ ...input, [e.target.name]: e.target.value });
@@ -61,7 +60,7 @@ const Signup = () => {
 
 
     return (
-        <div className={`flex items-center w-screen h-screen justify-center ${dark ? 'bg-[#2443]' : ''}`}>
+        <div className='flex items-center w-screen h-screen justify-center '>
             <form onSubmit={signupHandler} className='shadow-lg flex flex-col gap-5 p-8'>
                 <div className='my-4'>
                     <h1 className="font-bold text-center text-xl">ph</h1>
