@@ -14,6 +14,7 @@ import { setMessages } from '@/redux/chatSlice'
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
 import { Button } from './ui/button'
 import logo from '../assets/phLogo.png';
+import useGetAllUsers from '@/hooks/useGetAllUser';
 
 const Leftsidebar = ({ isOpen, toggleSidebar, dark, setDark }) => {
   useGetAllUsers();
