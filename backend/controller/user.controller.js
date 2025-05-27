@@ -24,6 +24,13 @@ export const register = async (req, res) => {
                 success: false,
             });
         }
+        const existinguser2 = await User.findOne({ username });
+        if (existinguser2) {
+            return res.status(401).json({
+                message: "username already taken",
+                success: false,
+            });
+        }
 
         const hashedpassword = await bcrypt.hash(password, 10);
         await User.create({
