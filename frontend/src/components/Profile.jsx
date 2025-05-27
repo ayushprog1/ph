@@ -64,7 +64,7 @@ const Profile = () => {
                 withCredentials: true 
             });
             if(res.data.success){
-                dispatch(setAuthUser(res.data.reciever));
+                dispatch(setAuthUser(res.data.receiver));
                 dispatch(setUserProfile(res.data.sender));
             }
 
